@@ -3,7 +3,7 @@
 tool.minDistance = 10;
 tool.maxDistance = 45;
 
-var room = window.location.pathname.split("/")[2];
+var room = /.*\/([^?]+)/.exec(window.location.pathname)[1];
 
 function pickColor(color) {
   $('#color').val(color);
@@ -333,7 +333,8 @@ function scrolled(x, y, delta) {
 $('#activeColorSwatch').css('background-color', $('.colorSwatch.active').css('background-color'));
 
 // Initialise Socket.io
-var socket = io.connect('/');
+var base_path = /(\/.+)?\/d\/.*/.exec(window.location.pathname)[1] || '/';
+var socket = io.connect({ path: base_path + "socket.io"});
 
 // Random User ID
 // Used when sending data
@@ -679,7 +680,7 @@ $('#clearImage').click(function() {
   }
 });
 
-$('.toggleBackground').click(function() {
+$('#toggleBackground').click(function() {
   $('#myCanvas').toggleClass('whiteBG');
 });
 
