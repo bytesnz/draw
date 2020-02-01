@@ -1,3 +1,10 @@
+# Deprecation
+
+There are many issues with draw so I have started working on a new project called [first-draft](https://first-draft.xyz?utm=bytesnz/draw) that is a replacement to draw. It is in its early development stages so far, but it is mostly feature-equal with draw.
+
+I will not be doing any more development on draw.
+
+
 # draw
 An intuitive collaborative drawing web based tool.
 Collaborative real-time drawing, sketching & painting
@@ -12,10 +19,6 @@ Use
 - The canvas can be scaled using either the mouse wheel, or by a two-finger pinch gesture
 - The canvas can be panned by using either middle-click and drag (only on Chrome), CTRL + left-click and drag, or a two-finger drag
 - To create a named canvas goto <url>/d/<name>, eg http://0.0.0.0:9002/d/coolstuff
-
-Demo
-----
-[draw demo site](http://draw.meldce.com)
 
 Installation
 ------------
